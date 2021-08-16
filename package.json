@@ -5,11 +5,13 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
     "build": "next build && npx tsc --project tsconfig.server.json",
-    "start": "cross-env NODE_ENV=production node dist/index.js"
+    "next-dev": "next dev"
   },
   "dependencies": {
     "@shopify/shopify-api": "^1.4.1",
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "next": "^11.1.0",
     "react": "^17.0.2",
